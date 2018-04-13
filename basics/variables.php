@@ -19,7 +19,7 @@ var_dump($a === $b);
 //Casting
 
 $a = '123';
-$a = (int)$a; 
+$a = (int)$a;
 $a = (bool)$a;
 
 //Casting from float to integer does not round the value up or down, but rather
@@ -27,7 +27,7 @@ $a = (bool)$a;
 
 $a = 1234.56;
 echo (int)$a;    // 1234 (not 1235)
-$a = -1234.56
+$a = -1234.56;
 echo (int)$a;    // -1234
 
 //Some general rules for casting to Boolean are that:
@@ -39,3 +39,33 @@ echo (int)$a;    // -1234
 //function is called on them.
 //• Any integer (or float) that is non-zero is true, so negative
 //numbers are true.
+
+$examples = [
+    "12 o clock",
+    "Half past 12",
+    "12.30",
+    "7.2e2 minutes after midnight"
+];
+
+foreach ($examples as $example) {
+    $result = 0 + $example;
+    var_dump($result);
+}
+
+//Floats and Integers
+
+echo (int) ( (0.1+0.7) * 10 ); // 7
+echo (int) ( (0.1+0.5) * 10);  // 6
+
+
+echo PHP_INT_SIZE . " " . PHP_INT_MAX . " " . PHP_INT_MIN;
+
+$pi = 3.14159625;
+$indiana = 3.2;
+$epsilon = 0.00001; // degree of error
+
+if (abs($pi - $indiana) < $epsilon) {
+    echo "Those values look the same to me";
+} else {
+    echo "Those values are different";
+}
