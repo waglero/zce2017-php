@@ -54,7 +54,7 @@ myFunc3('Data'); //Changed
 
 
 //variadics
-
+//variadics parameters should be aways the last 
 function parameterTypeExample($required, $optional = null, ...$variadicParams)
 {
     printf(
