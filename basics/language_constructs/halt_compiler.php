@@ -6,7 +6,7 @@ fseek($fp, __COMPILER_HALT_OFFSET__);
 
 var_dump(stream_get_contents($fp));
 
-__halt_compiler(); 
+__halt_compiler();
 
 //Assume you have one script with some php code and lots and lots of binary clutter.
 
